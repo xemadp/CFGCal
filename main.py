@@ -4,7 +4,6 @@ rules = "rules.txt"
 
 
 # Find Variables and Terminals.
-
 def findVT(rules):
     with open(rules,'r') as ruleset:
         chars = []
@@ -27,14 +26,16 @@ def findVT(rules):
 
     return varset,termset
 
+# Simplify Ruleset to only one RHS at a time.
 def simplifyRuleset(rules):
     with open(rules,'r') as ruleset:
         chars = []
-        simpleruleset = []
+        simpleruleset = {}
         for line in ruleset:
             line = line.strip().split('->')
             var = line[0].strip()
+            simpleruleset[var.strip()] = []
             for t in line[1].split('|'):
-                simpleruleset.append((var.strip(), t.strip()))
+                simpleruleset[var.strip()].append(t.strip())
 
     return simpleruleset
