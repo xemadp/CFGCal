@@ -19,9 +19,9 @@ A -> #
 ```
 this grammar eventually makes {0^n#1^n | n>=0 }
 
-we can show \epsilon or null terminal using '' as follows:
+we can show \epsilon or null terminal putting nothing:
 ``` txt
-S -> (S) | SS | ''
+S -> (S) | SS | 
 ```
 
 the said grammar will generate all the paranthesis matching possible.
