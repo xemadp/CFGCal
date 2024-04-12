@@ -20,4 +20,4 @@ A -> #
 this grammar eventually makes {0^n#1^n | n>=0 }
 
 # TODO
-[ ] Create a function for evaluation of a single variable.
+    - [] Create a function for evaluation of a single variable.
